@@ -10,11 +10,11 @@ try:
     browser.get(link)
 
     # Ваш код, который заполняет обязательные поля
-    first_name_input = browser.find_element(By.CSS_SELECTOR, "[placeholder=\"Input your first name\"]")
+    first_name_input = browser.find_element(By.CSS_SELECTOR, "div.first_block .first")
     first_name_input.send_keys("Test")
-    last_name_input = browser.find_element(By.CSS_SELECTOR, "[placeholder=\"Input your last name\"]")
+    last_name_input = browser.find_element(By.CSS_SELECTOR, "div.first_block .second")
     last_name_input.send_keys("Test")
-    email_input = browser.find_element(By.CSS_SELECTOR, "[placeholder=\"Input your email\"]")
+    email_input = browser.find_element(By.CSS_SELECTOR, "div.first_block .third")
     email_input.send_keys("Test")
 
 
@@ -36,7 +36,7 @@ try:
 
 finally:
     # ожидание чтобы визуально оценить результаты прохождения скрипта
-    time.sleep(10)
+    time.sleep(5)
     # закрываем браузер после всех манипуляций
     browser.quit()
 
